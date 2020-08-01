@@ -11,11 +11,13 @@ public class Chrome {
        
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https:www.amazon.com");
-		String url = driver.getCurrentUrl();
+		driver.get("https:www.amazon.com");//got to the browser
+		String url = driver.getCurrentUrl(); // validate if you landed on correct url
 		System.out.println(url);
-		String title = driver.getTitle();
+		String title = driver.getTitle();//validate if your page title is correct
 		System.out.println(title);
+		//System.out.println(driver.getPageSource());   // to get the page source we also can 
+		                           
 	}
 
 }
