@@ -21,8 +21,8 @@ public static String url = "http://166.62.36.207/syntaxpractice/basic-checkbox-d
 		
 		for (WebElement checkBoxOption : optionCheckBoxes) {
 			if(checkBoxOption.isEnabled()) {
-				String checkBox = checkBoxOption.getAttribute("value");
-				if(checkBox.equals("Option-2")) {
+				String checkBoxValue = checkBoxOption.getAttribute("value");
+				if(checkBoxValue.equals("Option-2")) {
 					checkBoxOption.click();
 					Thread.sleep(1000);
 					break;

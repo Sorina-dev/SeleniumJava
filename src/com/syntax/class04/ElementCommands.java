@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+// check if radio button is displayed and selected. Print it before being selected and after.
 public class ElementCommands {
 	
 	public static String url = "http://166.62.36.207/syntaxpractice/basic-radiobutton-demo.html";
