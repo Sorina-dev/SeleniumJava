@@ -1,4 +1,4 @@
-package com.class07.Windows;
+package com.class07.Windows_Wait;
 
 import java.util.concurrent.TimeUnit;
 
