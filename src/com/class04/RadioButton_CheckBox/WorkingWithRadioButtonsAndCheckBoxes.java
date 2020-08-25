@@ -20,7 +20,7 @@ public static void main(String[] args) {
 	// Store all the elements of the same category in the list of WebElements. 
 	List<WebElement> list = driver.findElements(By.name("radioButton")); 
 	// Create a boolean variable to store true/false.
-	Boolean is_selected = list.get(0).isSelected();
+	boolean is_selected = list.get(0).isSelected();
 	// If 'is_selected' is true that means the first radio button is selected.
 	if (is_selected == true) { 
 		// If the first radio button is selected by default then, select the second radio button.
