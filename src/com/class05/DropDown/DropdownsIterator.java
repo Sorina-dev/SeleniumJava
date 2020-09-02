@@ -19,7 +19,7 @@ public static void main(String[] args) {
 	  WebElement categoriesDD = driver.findElement(By.id("searchDropdownBox"));
 	  
 	  Select select = new Select(categoriesDD);
-	  List<WebElement> options = select.getOptions();
+	  List<WebElement> options = select.getOptions();//multi selector dropdown only
 	  
 	  Iterator<WebElement> it = options.iterator();
 	    while(it.hasNext()) {

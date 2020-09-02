@@ -100,8 +100,6 @@ public static void main(String[] args) throws InterruptedException {
 	action.dragAndDrop(drag, drop).perform();
 	Thread.sleep(2000);
 	driver.close();
-
-	
 	
 	
 }
