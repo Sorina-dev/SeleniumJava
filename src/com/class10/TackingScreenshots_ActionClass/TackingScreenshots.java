@@ -1,3 +1,4 @@
+
 package com.class10.TackingScreenshots_ActionClass;
 
 import java.io.File;
@@ -29,6 +30,7 @@ public class TackingScreenshots {
 		password.sendKeys("Hum@nhrm123");
 		loginButton.click();
 		
+		//a class            //downcasting   //interface
 		TakesScreenshot ts =(TakesScreenshot) driver;
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE); // the screenshot is taken 
 		
@@ -36,8 +38,9 @@ public class TackingScreenshots {
 			FileUtils.copyFile(sourceFile, new File("screenshots\\HRMS\\adminLogin.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}//in order to check if its there, refresh, restart.., then try to create a new folder with the name
+		//you used to create in your program and eclipse will inform you that it is  this folder already created
+		//refresh again and check
 		Thread.sleep(2000);
 		driver.quit();
 		
