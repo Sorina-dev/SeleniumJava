@@ -16,7 +16,7 @@ public static void main(String[] args) throws InterruptedException {
 		 */
 		
 		/* it is a button or buttons in which we can select only one option
-		 * check box --> a wen element that we can perform multiple selections
+		 * check box --> a element that we can perform multiple selections
 		 */
 		
 		setUp("chrome", SyntaxPrctice_URL);

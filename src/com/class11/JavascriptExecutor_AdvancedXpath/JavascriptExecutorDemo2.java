@@ -13,12 +13,16 @@ public class JavascriptExecutorDemo2 {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://amazon.com");
 		
+		//to perform Scroll Up
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		
+		//to perform Scroll Down
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0, -500)");
 		Thread.sleep(2000);
+		
+		//to scroll an application to specified element
 		WebElement backToTop = driver.findElement(By.xpath("//span[text() = 'Back to top']"));
 		js.executeScript("arguments[0].scrollIntoView(true);", backToTop);
 	}

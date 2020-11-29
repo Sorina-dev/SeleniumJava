@@ -24,13 +24,21 @@ public class JavascriptExecutorDemo {
 		username.sendKeys("Admin");
 		password.sendKeys("Hum@nhrm123");
 		
+		// to make the background color of the text
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].style.backgroundColor='red'", password);
 		
 		Thread.sleep(2000);
 		
+		// to click on the button
 		js.executeScript("arguments[0].click();", loginButton);
 		
+		//send text using JavaScript executor
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("document.getElementById('email').value='cristiansorina@gmail.com';");
+		
+		
+
 		
 		
 		

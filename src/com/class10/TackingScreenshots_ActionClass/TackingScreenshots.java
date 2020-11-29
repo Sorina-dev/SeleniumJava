@@ -16,7 +16,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TackingScreenshots {
 	public static String url = "http://18.232.148.34/humanresources/symfony/web/index.php/auth/login";
 
-
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 
@@ -29,23 +28,32 @@ public class TackingScreenshots {
 		username.sendKeys("Admin");
 		password.sendKeys("Hum@nhrm123");
 		loginButton.click();
+
+		//Step 1. Convert web driver object to TakeScreenshot interface
+		// a class //downcasting //interface
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		
-		//a class            //downcasting   //interface
-		TakesScreenshot ts =(TakesScreenshot) driver;
-		File sourceFile = ts.getScreenshotAs(OutputType.FILE); // the screenshot is taken 
+		//Step 2. Call getScreenshotAs method to create image file
+		File sourceFile = ts.getScreenshotAs(OutputType.FILE); // the screenshot is taken
 		
+		//Step 3. Move image file to new destination
+		 File DestFile=new File("screenshots\\HRMS\\adminLogin.png");
+
+		//Step 4. Copy file at destination  
 		try {
-			FileUtils.copyFile(sourceFile, new File("screenshots\\HRMS\\adminLogin.png"));
+			FileUtils.copyFile(sourceFile, DestFile);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}//in order to check if its there, refresh, restart.., then try to create a new folder with the name
-		//you used to create in your program and eclipse will inform you that it is  this folder already created
-		//refresh again and check
+		}
 		Thread.sleep(2000);
 		driver.quit();
 		
+		// in order to check if its there, refresh, restart.., then try to create a new
+		// folder with the name
+		// you used to create in your program and eclipse will inform you that it is
+		// this folder already created
+		// refresh again and check
 
 	}
-
 
 }
